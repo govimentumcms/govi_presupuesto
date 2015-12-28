@@ -9,10 +9,10 @@
  */
 function govi_presupuesto_taxonomy_default_vocabularies() {
   return array(
-    'normatividad_periodicidad' => array(
-      'name' => 'Normatividad Periodicidad',
-      'machine_name' => 'normatividad_periodicidad',
-      'description' => 'Permite clasificar los periodos en los que se publican o reportan los informes',
+    'presupuesto_periodicidad' => array(
+      'name' => 'Presupuesto Periodicidad',
+      'machine_name' => 'presupuesto_periodicidad',
+      'description' => 'Permite clasificar los periodos en los que se publican o reportan los informes de gestión presupuestal',
       'hierarchy' => 0,
       'module' => 'taxonomy',
       'weight' => 0,
