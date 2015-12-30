@@ -168,7 +168,7 @@ function govi_presupuesto_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_presupuesto_tags',
     'label' => 'Tags',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),

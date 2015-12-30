@@ -59,9 +59,13 @@ function govi_presupuesto_views_default_views() {
   $handler->display->display_options['fields']['field_presupuesto_adjunto']['id'] = 'field_presupuesto_adjunto';
   $handler->display->display_options['fields']['field_presupuesto_adjunto']['table'] = 'field_data_field_presupuesto_adjunto';
   $handler->display->display_options['fields']['field_presupuesto_adjunto']['field'] = 'field_presupuesto_adjunto';
-  $handler->display->display_options['fields']['field_presupuesto_adjunto']['label'] = '';
   $handler->display->display_options['fields']['field_presupuesto_adjunto']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_presupuesto_adjunto']['click_sort_column'] = 'fid';
+  /* Field: Content: Periodicidad */
+  $handler->display->display_options['fields']['field_presupuesto_periodicidad']['id'] = 'field_presupuesto_periodicidad';
+  $handler->display->display_options['fields']['field_presupuesto_periodicidad']['table'] = 'field_data_field_presupuesto_periodicidad';
+  $handler->display->display_options['fields']['field_presupuesto_periodicidad']['field'] = 'field_presupuesto_periodicidad';
+  $handler->display->display_options['fields']['field_presupuesto_periodicidad']['element_label_colon'] = FALSE;
   /* Sort criterion: Content: Fecha de expedición (field_presupuesto_fecha_exp) */
   $handler->display->display_options['sorts']['field_presupuesto_fecha_exp_value']['id'] = 'field_presupuesto_fecha_exp_value';
   $handler->display->display_options['sorts']['field_presupuesto_fecha_exp_value']['table'] = 'field_data_field_presupuesto_fecha_exp';
@@ -94,6 +98,8 @@ function govi_presupuesto_views_default_views() {
     t('Sort by'),
     t('Asc'),
     t('Desc'),
+    t('Archivo adjunto'),
+    t('Periodicidad'),
     t('Page'),
   );
   $export['gestion'] = $view;
