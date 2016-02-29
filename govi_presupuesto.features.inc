@@ -5,26 +5,10 @@
  */
 
 /**
- * Implements hook_views_api().
+ * Implements hook_ctools_plugin_api().
  */
-function govi_presupuesto_views_api($module = NULL, $api = NULL) {
-  return array("api" => "3.0");
-}
-
-/**
- * Implements hook_node_info().
- */
-function govi_presupuesto_node_info() {
-  $items = array(
-    'presupuesto' => array(
-      'name' => t('Presupuesto'),
-      'base' => 'node_content',
-      'description' => t('Tipo de contenido que permite gestionar informes, estrategias, planes, proyectos de inversión, supervisión notificación y vigilancia'),
-      'has_title' => '1',
-      'title_label' => t('Nombre'),
-      'help' => '',
-    ),
-  );
-  drupal_alter('node_info', $items);
-  return $items;
+function govi_presupuesto_ctools_plugin_api($module = NULL, $api = NULL) {
+  if ($module == "field_group" && $api == "field_group") {
+    return array("version" => "1");
+  }
 }
