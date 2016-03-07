@@ -11,6 +11,7 @@ dependencies[] = file
 dependencies[] = options
 dependencies[] = taxonomy
 dependencies[] = text
+dependencies[] = uuid
 dependencies[] = uuid_features
 dependencies[] = views
 features[ctools][] = field_group:field_group:1
