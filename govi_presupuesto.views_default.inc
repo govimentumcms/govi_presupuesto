@@ -44,11 +44,6 @@ function govi_presupuesto_views_default_views() {
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
-  /* Relationship: Content: Clasificación (field_presupuesto_clasificacion) */
-  $handler->display->display_options['relationships']['field_presupuesto_clasificacion_tid']['id'] = 'field_presupuesto_clasificacion_tid';
-  $handler->display->display_options['relationships']['field_presupuesto_clasificacion_tid']['table'] = 'field_data_field_presupuesto_clasificacion';
-  $handler->display->display_options['relationships']['field_presupuesto_clasificacion_tid']['field'] = 'field_presupuesto_clasificacion_tid';
-  $handler->display->display_options['relationships']['field_presupuesto_clasificacion_tid']['required'] = TRUE;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -187,12 +182,15 @@ function govi_presupuesto_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'presupuesto' => 'presupuesto',
   );
-  /* Filter criterion: Taxonomy term: Taxonomy term UUID */
-  $handler->display->display_options['filters']['uuid']['id'] = 'uuid';
-  $handler->display->display_options['filters']['uuid']['table'] = 'taxonomy_term_data';
-  $handler->display->display_options['filters']['uuid']['field'] = 'uuid';
-  $handler->display->display_options['filters']['uuid']['relationship'] = 'field_presupuesto_clasificacion_tid';
-  $handler->display->display_options['filters']['uuid']['value'] = '5eb27c34-d722-4a9b-94ad-90c4f8c2c16f';
+  /* Filter criterion: Content: Has taxonomy term */
+  $handler->display->display_options['filters']['tid']['id'] = 'tid';
+  $handler->display->display_options['filters']['tid']['table'] = 'taxonomy_index';
+  $handler->display->display_options['filters']['tid']['field'] = 'tid';
+  $handler->display->display_options['filters']['tid']['value'] = array(
+    52 => '52',
+  );
+  $handler->display->display_options['filters']['tid']['type'] = 'select';
+  $handler->display->display_options['filters']['tid']['vocabulary'] = 'presupuesto_clasificacion';
   $handler->display->display_options['path'] = 'transparencia/presupuesto/general';
 
   /* Display: Ejecución Presupuestal */
@@ -223,12 +221,16 @@ function govi_presupuesto_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'presupuesto' => 'presupuesto',
   );
-  /* Filter criterion: Taxonomy term: Taxonomy term UUID */
-  $handler->display->display_options['filters']['uuid']['id'] = 'uuid';
-  $handler->display->display_options['filters']['uuid']['table'] = 'taxonomy_term_data';
-  $handler->display->display_options['filters']['uuid']['field'] = 'uuid';
-  $handler->display->display_options['filters']['uuid']['relationship'] = 'field_presupuesto_clasificacion_tid';
-  $handler->display->display_options['filters']['uuid']['value'] = '8e8bc56b-008e-4bf6-8725-4fdc35ff8af1';
+  $handler->display->display_options['filters']['type']['group'] = 1;
+  /* Filter criterion: Content: Has taxonomy term */
+  $handler->display->display_options['filters']['tid']['id'] = 'tid';
+  $handler->display->display_options['filters']['tid']['table'] = 'taxonomy_index';
+  $handler->display->display_options['filters']['tid']['field'] = 'tid';
+  $handler->display->display_options['filters']['tid']['value'] = array(
+    50 => '50',
+  );
+  $handler->display->display_options['filters']['tid']['type'] = 'select';
+  $handler->display->display_options['filters']['tid']['vocabulary'] = 'presupuesto_clasificacion';
   $handler->display->display_options['path'] = 'transparencia/presupuesto/ejecucion-presupuestal';
 
   /* Display: Estados Financieros */
@@ -260,13 +262,15 @@ function govi_presupuesto_views_default_views() {
     'presupuesto' => 'presupuesto',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Taxonomy term: Taxonomy term UUID */
-  $handler->display->display_options['filters']['uuid']['id'] = 'uuid';
-  $handler->display->display_options['filters']['uuid']['table'] = 'taxonomy_term_data';
-  $handler->display->display_options['filters']['uuid']['field'] = 'uuid';
-  $handler->display->display_options['filters']['uuid']['relationship'] = 'field_presupuesto_clasificacion_tid';
-  $handler->display->display_options['filters']['uuid']['value'] = '80774c5f-cce9-468c-b96e-05c6aa5e8104';
-  $handler->display->display_options['filters']['uuid']['group'] = 1;
+  /* Filter criterion: Content: Has taxonomy term */
+  $handler->display->display_options['filters']['tid']['id'] = 'tid';
+  $handler->display->display_options['filters']['tid']['table'] = 'taxonomy_index';
+  $handler->display->display_options['filters']['tid']['field'] = 'tid';
+  $handler->display->display_options['filters']['tid']['value'] = array(
+    51 => '51',
+  );
+  $handler->display->display_options['filters']['tid']['type'] = 'select';
+  $handler->display->display_options['filters']['tid']['vocabulary'] = 'presupuesto_clasificacion';
   $handler->display->display_options['path'] = 'transparencia/presupuesto/estados-financieros';
   $translatables['presupuesto'] = array(
     t('Master'),
@@ -277,7 +281,6 @@ function govi_presupuesto_views_default_views() {
     t('Sort by'),
     t('Asc'),
     t('Desc'),
-    t('term from field_presupuesto_clasificacion'),
     t('Archivo adjunto'),
     t('Clasificación'),
     t('Descripción'),
