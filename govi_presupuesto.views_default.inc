@@ -104,11 +104,6 @@ function govi_presupuesto_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'presupuesto' => 'presupuesto',
   );
-  /* Filter criterion: Taxonomy term: Taxonomy term UUID */
-  $handler->display->display_options['filters']['uuid']['id'] = 'uuid';
-  $handler->display->display_options['filters']['uuid']['table'] = 'taxonomy_term_data';
-  $handler->display->display_options['filters']['uuid']['field'] = 'uuid';
-  $handler->display->display_options['filters']['uuid']['relationship'] = 'field_presupuesto_clasificacion_tid';
 
   /* Display: Presupuesto */
   $handler = $view->new_display('page', 'Presupuesto', 'page');
@@ -282,7 +277,6 @@ function govi_presupuesto_views_default_views() {
     t('Sort by'),
     t('Asc'),
     t('Desc'),
-    t('term from field_presupuesto_clasificacion'),
     t('Archivo adjunto'),
     t('Clasificación'),
     t('Descripción'),
