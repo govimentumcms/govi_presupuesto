@@ -277,6 +277,7 @@ function govi_presupuesto_views_default_views() {
     t('Sort by'),
     t('Asc'),
     t('Desc'),
+    t('term from field_presupuesto_clasificacion'),
     t('Archivo adjunto'),
     t('Clasificación'),
     t('Descripción'),
