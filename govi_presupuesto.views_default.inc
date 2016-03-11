@@ -68,6 +68,10 @@ function govi_presupuesto_views_default_views() {
   $handler->display->display_options['fields']['field_presupuesto_fecha_exp']['id'] = 'field_presupuesto_fecha_exp';
   $handler->display->display_options['fields']['field_presupuesto_fecha_exp']['table'] = 'field_data_field_presupuesto_fecha_exp';
   $handler->display->display_options['fields']['field_presupuesto_fecha_exp']['field'] = 'field_presupuesto_fecha_exp';
+  $handler->display->display_options['fields']['field_presupuesto_fecha_exp']['label'] = '';
+  $handler->display->display_options['fields']['field_presupuesto_fecha_exp']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_presupuesto_fecha_exp']['alter']['strip_tags'] = TRUE;
+  $handler->display->display_options['fields']['field_presupuesto_fecha_exp']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_presupuesto_fecha_exp']['settings'] = array(
     'format_type' => 'anho',
     'fromto' => 'both',
@@ -197,6 +201,19 @@ function govi_presupuesto_views_default_views() {
   $handler = $view->new_display('page', 'Ejecución Presupuestal', 'page_2');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Ejecución Presupuestal';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['grouping'] = array(
+    0 => array(
+      'field' => 'field_presupuesto_fecha_exp',
+      'rendered' => 1,
+      'rendered_strip' => 0,
+    ),
+  );
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['header'] = FALSE;
   /* Header: Global: Text area */
   $handler->display->display_options['header']['area']['id'] = 'area';
@@ -205,6 +222,47 @@ function govi_presupuesto_views_default_views() {
   $handler->display->display_options['header']['area']['empty'] = TRUE;
   $handler->display->display_options['header']['area']['content'] = 'Cras vestibulum tellus massa, ac dignissim sem lobortis ut. Donec sit amet nisi ac lectus pulvinar tempus at eu enim. Curabitur varius eget nunc in pellentesque. In cursus lectus imperdiet, ultricies nunc in, pretium eros. Ut dignissim feugiat libero. Sed sit amet magna ut tortor tincidunt rhoncus in ut ipsum. Curabitur vel ex sed odio posuere sollicitudin et sed quam. Pellentesque vel convallis velit. Curabitur risus urna, aliquet eu ipsum vitae, vestibulum varius nibh. Nunc eleifend urna quam, et ultricies nisl gravida non. Vestibulum ipsum sapien, pulvinar eu porttitor a, cursus suscipit ex. Pellentesque varius est ut justo interdum, eu semper metus dictum. Nulla quam tortor, elementum non dignissim eu, vehicula quis nibh. ';
   $handler->display->display_options['header']['area']['format'] = 'filtered_html';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Content: Archivo adjunto */
+  $handler->display->display_options['fields']['field_presupuesto_adjunto']['id'] = 'field_presupuesto_adjunto';
+  $handler->display->display_options['fields']['field_presupuesto_adjunto']['table'] = 'field_data_field_presupuesto_adjunto';
+  $handler->display->display_options['fields']['field_presupuesto_adjunto']['field'] = 'field_presupuesto_adjunto';
+  $handler->display->display_options['fields']['field_presupuesto_adjunto']['click_sort_column'] = 'fid';
+  /* Field: Content: Clasificación */
+  $handler->display->display_options['fields']['field_presupuesto_clasificacion']['id'] = 'field_presupuesto_clasificacion';
+  $handler->display->display_options['fields']['field_presupuesto_clasificacion']['table'] = 'field_data_field_presupuesto_clasificacion';
+  $handler->display->display_options['fields']['field_presupuesto_clasificacion']['field'] = 'field_presupuesto_clasificacion';
+  /* Field: Content: Descripción */
+  $handler->display->display_options['fields']['field_presupuesto_descripcion']['id'] = 'field_presupuesto_descripcion';
+  $handler->display->display_options['fields']['field_presupuesto_descripcion']['table'] = 'field_data_field_presupuesto_descripcion';
+  $handler->display->display_options['fields']['field_presupuesto_descripcion']['field'] = 'field_presupuesto_descripcion';
+  /* Field: Content: Fecha de expedición */
+  $handler->display->display_options['fields']['field_presupuesto_fecha_exp']['id'] = 'field_presupuesto_fecha_exp';
+  $handler->display->display_options['fields']['field_presupuesto_fecha_exp']['table'] = 'field_data_field_presupuesto_fecha_exp';
+  $handler->display->display_options['fields']['field_presupuesto_fecha_exp']['field'] = 'field_presupuesto_fecha_exp';
+  $handler->display->display_options['fields']['field_presupuesto_fecha_exp']['label'] = '';
+  $handler->display->display_options['fields']['field_presupuesto_fecha_exp']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_presupuesto_fecha_exp']['alter']['strip_tags'] = TRUE;
+  $handler->display->display_options['fields']['field_presupuesto_fecha_exp']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_presupuesto_fecha_exp']['settings'] = array(
+    'format_type' => 'anho',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+    'show_remaining_days' => 0,
+  );
+  /* Field: Content: Periodicidad */
+  $handler->display->display_options['fields']['field_presupuesto_periodicidad']['id'] = 'field_presupuesto_periodicidad';
+  $handler->display->display_options['fields']['field_presupuesto_periodicidad']['table'] = 'field_data_field_presupuesto_periodicidad';
+  $handler->display->display_options['fields']['field_presupuesto_periodicidad']['field'] = 'field_presupuesto_periodicidad';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -237,6 +295,19 @@ function govi_presupuesto_views_default_views() {
   $handler = $view->new_display('page', 'Estados Financieros', 'page_3');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Estados Financieros';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['grouping'] = array(
+    0 => array(
+      'field' => 'field_presupuesto_fecha_exp',
+      'rendered' => 1,
+      'rendered_strip' => 0,
+    ),
+  );
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['header'] = FALSE;
   /* Header: Global: Text area */
   $handler->display->display_options['header']['area']['id'] = 'area';
@@ -245,6 +316,47 @@ function govi_presupuesto_views_default_views() {
   $handler->display->display_options['header']['area']['empty'] = TRUE;
   $handler->display->display_options['header']['area']['content'] = 'Ut consequat lorem magna, a dapibus neque sodales sed. Sed faucibus arcu quis sem faucibus, ut efficitur orci aliquet. Sed a viverra justo, nec lacinia purus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus molestie lorem et mauris convallis blandit. Vestibulum mi ipsum, commodo a est commodo, convallis gravida quam. Sed ut iaculis lorem. Duis tortor leo, aliquet sit amet arcu vitae, varius sodales nulla. Maecenas molestie lectus mattis tempor posuere. Phasellus sit amet nibh purus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse euismod tempor semper. Sed at urna pharetra, pellentesque nisl vel, bibendum nisl. Aliquam vel nisi et dui condimentum hendrerit. Praesent a justo enim. Nunc molestie purus at rhoncus dignissim. ';
   $handler->display->display_options['header']['area']['format'] = 'filtered_html';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Content: Archivo adjunto */
+  $handler->display->display_options['fields']['field_presupuesto_adjunto']['id'] = 'field_presupuesto_adjunto';
+  $handler->display->display_options['fields']['field_presupuesto_adjunto']['table'] = 'field_data_field_presupuesto_adjunto';
+  $handler->display->display_options['fields']['field_presupuesto_adjunto']['field'] = 'field_presupuesto_adjunto';
+  $handler->display->display_options['fields']['field_presupuesto_adjunto']['click_sort_column'] = 'fid';
+  /* Field: Content: Clasificación */
+  $handler->display->display_options['fields']['field_presupuesto_clasificacion']['id'] = 'field_presupuesto_clasificacion';
+  $handler->display->display_options['fields']['field_presupuesto_clasificacion']['table'] = 'field_data_field_presupuesto_clasificacion';
+  $handler->display->display_options['fields']['field_presupuesto_clasificacion']['field'] = 'field_presupuesto_clasificacion';
+  /* Field: Content: Descripción */
+  $handler->display->display_options['fields']['field_presupuesto_descripcion']['id'] = 'field_presupuesto_descripcion';
+  $handler->display->display_options['fields']['field_presupuesto_descripcion']['table'] = 'field_data_field_presupuesto_descripcion';
+  $handler->display->display_options['fields']['field_presupuesto_descripcion']['field'] = 'field_presupuesto_descripcion';
+  /* Field: Content: Fecha de expedición */
+  $handler->display->display_options['fields']['field_presupuesto_fecha_exp']['id'] = 'field_presupuesto_fecha_exp';
+  $handler->display->display_options['fields']['field_presupuesto_fecha_exp']['table'] = 'field_data_field_presupuesto_fecha_exp';
+  $handler->display->display_options['fields']['field_presupuesto_fecha_exp']['field'] = 'field_presupuesto_fecha_exp';
+  $handler->display->display_options['fields']['field_presupuesto_fecha_exp']['label'] = '';
+  $handler->display->display_options['fields']['field_presupuesto_fecha_exp']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_presupuesto_fecha_exp']['alter']['strip_tags'] = TRUE;
+  $handler->display->display_options['fields']['field_presupuesto_fecha_exp']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_presupuesto_fecha_exp']['settings'] = array(
+    'format_type' => 'anho',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+    'show_remaining_days' => 0,
+  );
+  /* Field: Content: Periodicidad */
+  $handler->display->display_options['fields']['field_presupuesto_periodicidad']['id'] = 'field_presupuesto_periodicidad';
+  $handler->display->display_options['fields']['field_presupuesto_periodicidad']['table'] = 'field_data_field_presupuesto_periodicidad';
+  $handler->display->display_options['fields']['field_presupuesto_periodicidad']['field'] = 'field_presupuesto_periodicidad';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -284,7 +396,6 @@ function govi_presupuesto_views_default_views() {
     t('Archivo adjunto'),
     t('Clasificación'),
     t('Descripción'),
-    t('Fecha de expedición'),
     t('Periodicidad'),
     t('Presupuesto'),
     t('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam quis tortor vel eros semper varius. Morbi vulputate, lacus a tristique mollis, sem dolor ullamcorper massa, nec aliquet est dolor sed justo. Aliquam interdum sapien a malesuada pellentesque. Cras in dui viverra, tempus erat ac, maximus enim. Sed pretium at odio id mattis. Nullam consectetur elit eget dui iaculis porttitor eu id ante. Maecenas bibendum augue enim, id sollicitudin augue interdum id. Nam nisl risus, placerat vel lacus vulputate, congue fringilla turpis. Ut sed feugiat dolor. Sed sit amet nisl a eros volutpat egestas. Morbi in semper velit. Ut ultrices pharetra massa sit amet sagittis. Aliquam sit amet pretium tellus. '),
