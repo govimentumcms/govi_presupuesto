@@ -130,6 +130,7 @@ function govi_presupuesto_views_default_views() {
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['empty'] = TRUE;
   $handler->display->display_options['header']['area']['content'] = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam quis tortor vel eros semper varius. Morbi vulputate, lacus a tristique mollis, sem dolor ullamcorper massa, nec aliquet est dolor sed justo. Aliquam interdum sapien a malesuada pellentesque. Cras in dui viverra, tempus erat ac, maximus enim. Sed pretium at odio id mattis. Nullam consectetur elit eget dui iaculis porttitor eu id ante. Maecenas bibendum augue enim, id sollicitudin augue interdum id. Nam nisl risus, placerat vel lacus vulputate, congue fringilla turpis. Ut sed feugiat dolor. Sed sit amet nisl a eros volutpat egestas. Morbi in semper velit. Ut ultrices pharetra massa sit amet sagittis. Aliquam sit amet pretium tellus. ';
   $handler->display->display_options['header']['area']['format'] = 'filtered_html';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
