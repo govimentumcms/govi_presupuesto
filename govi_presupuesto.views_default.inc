@@ -200,6 +200,7 @@ function govi_presupuesto_views_default_views() {
   $handler->display->display_options['fields']['field_presupuesto_adjunto']['alter']['make_link'] = TRUE;
   $handler->display->display_options['fields']['field_presupuesto_adjunto']['alter']['path'] = '[field_presupuesto_adjunto]';
   $handler->display->display_options['fields']['field_presupuesto_adjunto']['alter']['absolute'] = TRUE;
+  $handler->display->display_options['fields']['field_presupuesto_adjunto']['alter']['link_class'] = 'pure-button';
   $handler->display->display_options['fields']['field_presupuesto_adjunto']['alter']['target'] = '_blank';
   $handler->display->display_options['fields']['field_presupuesto_adjunto']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_presupuesto_adjunto']['type'] = 'file_url_plain';
@@ -300,6 +301,7 @@ function govi_presupuesto_views_default_views() {
   $handler->display->display_options['fields']['field_presupuesto_adjunto']['alter']['make_link'] = TRUE;
   $handler->display->display_options['fields']['field_presupuesto_adjunto']['alter']['path'] = '[field_presupuesto_adjunto]';
   $handler->display->display_options['fields']['field_presupuesto_adjunto']['alter']['absolute'] = TRUE;
+  $handler->display->display_options['fields']['field_presupuesto_adjunto']['alter']['link_class'] = 'pure-button';
   $handler->display->display_options['fields']['field_presupuesto_adjunto']['alter']['target'] = '_blank';
   $handler->display->display_options['fields']['field_presupuesto_adjunto']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_presupuesto_adjunto']['type'] = 'file_url_plain';
@@ -401,6 +403,7 @@ function govi_presupuesto_views_default_views() {
   $handler->display->display_options['fields']['field_presupuesto_adjunto']['alter']['make_link'] = TRUE;
   $handler->display->display_options['fields']['field_presupuesto_adjunto']['alter']['path'] = '[field_presupuesto_adjunto]';
   $handler->display->display_options['fields']['field_presupuesto_adjunto']['alter']['absolute'] = TRUE;
+  $handler->display->display_options['fields']['field_presupuesto_adjunto']['alter']['link_class'] = 'pure-button';
   $handler->display->display_options['fields']['field_presupuesto_adjunto']['alter']['target'] = '_blank';
   $handler->display->display_options['fields']['field_presupuesto_adjunto']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_presupuesto_adjunto']['type'] = 'file_url_plain';
