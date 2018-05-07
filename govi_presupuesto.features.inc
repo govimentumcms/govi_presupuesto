@@ -32,9 +32,9 @@ function govi_presupuesto_views_api($module = NULL, $api = NULL) {
 function govi_presupuesto_node_info() {
   $items = array(
     'presupuesto' => array(
-      'name' => t('Presupuesto'),
+      'name' => t('5. Presupuesto'),
       'base' => 'node_content',
-      'description' => t('Utilize este tipo de contenido para gestionar la información presupuestal de su entidad'),
+      'description' => t('Con este tipo de contenido puede gestionar el Presupuesto general asignado, Ejecución presupuestal histórica anual y Estados financieros de la Entidad.'),
       'has_title' => '1',
       'title_label' => t('Nombre'),
       'help' => '',
